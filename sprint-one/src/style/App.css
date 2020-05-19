@@ -415,7 +415,7 @@ ul {
 
 @media screen and (min-width: 768px) {
   .header__logo {
-    margin: 25px 0 0 0;
+    margin: 5px 0 0 0;
   }
 }
 
@@ -433,8 +433,11 @@ ul {
 
 @media screen and (min-width: 768px) {
   .logo-container {
-    width: 20%;
-    margin-right: 170px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 40%;
+    margin-left: 0;
   }
 }
 
@@ -449,9 +452,10 @@ ul {
     display: -ms-flexbox;
     display: flex;
     margin: 0 auto;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding-top: 20px;
   }
 }
 
@@ -469,10 +473,21 @@ ul {
 
 @media screen and (min-width: 768px) {
   .navbar-container {
+    max-width: 465px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .navbar-container {
+    width: 50%;
   }
 }
 
@@ -489,6 +504,12 @@ ul {
   width: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .search-bar-container {
+    width: 150%;
+  }
+}
+
 .search-bar-input {
   width: 100%;
   height: 50px;
@@ -496,6 +517,12 @@ ul {
   border: 2px solid #e1e1e1;
   border-radius: 5px;
   padding-left: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .search-bar-input {
+    width: 95%;
+  }
 }
 
 .upload-profile-container {
@@ -512,12 +539,19 @@ ul {
 
 .button-upload-container {
   height: 50px;
+  margin: 0 auto;
 }
 
 .profile-picture {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .profile-picture {
+    margin-left: 15px;
+  }
 }
 
 .button {
@@ -529,9 +563,21 @@ ul {
   font-family: "Avenir Next Demi";
 }
 
+@media screen and (min-width: 768px) {
+  .button {
+    width: 130px;
+  }
+}
+
 .button-upload span {
   font-size: 1.5rem;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .button-upload span {
+    padding-right: 5px;
+  }
 }
 
 .main-video {
@@ -545,6 +591,12 @@ ul {
   height: 180px;
   background-color: #323232;
   z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+  .main-video-container {
+    height: 400px;
+  }
 }
 
 .main-video__video {
@@ -569,40 +621,102 @@ ul {
   z-index: -1;
 }
 
+@media screen and (min-width: 768px) {
+  .main-video__info {
+    padding-bottom: 5px;
+  }
+}
+
 .main-video__info h2 {
   margin-bottom: 0;
   font-family: "Avenir Next Bold";
 }
 
+@media screen and (min-width: 768px) {
+  .main-video__info h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+}
+
 .main-video__info h3 {
   display: inline-block;
   font-size: 1.1rem;
-  width: 50%;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-video__info h3 {
+    width: 20%;
+  }
 }
 
 .main-video__info img {
   width: 25px;
   height: 20px;
+  padding-top: 5px;
 }
 
 .main-video__date {
   font-size: 1.1rem;
-  width: 50%;
+  color: #afafaf;
+}
+
+@media screen and (min-width: 768px) {
+  .main-video__date {
+    padding-top: 18px;
+  }
 }
 
 .main-video__extra-info {
   width: 100%;
 }
 
+@media screen and (min-width: 768px) {
+  .main-video__extra-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 .main-video__extra-info div {
   display: inline-block;
   font-size: 1.1rem;
-  width: 50%;
+  margin-right: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-video__extra-info div {
+    margin-right: 0;
+    margin-left: 30px;
+    padding-top: 15px;
+  }
 }
 
 .main-video__extended-info {
   padding: 25px 0 40px 0;
   line-height: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-video__extended-info {
+    width: 70%;
+    margin-left: 2.5%;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-video-inner-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
 }
 
 .button-video-container {
@@ -619,6 +733,13 @@ ul {
           justify-content: space-evenly;
   bottom: 45px;
   z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .button-video-container {
+    bottom: 50px;
+    max-width: 85%;
+  }
 }
 
 .button-video-container img {
@@ -732,6 +853,8 @@ button.button.button-fullscreen-volume {
 
 .next-video__list {
   width: 95%;
+  max-width: 350px;
+  margin-left: 2.5%;
 }
 
 .next-video__item {
@@ -806,6 +929,13 @@ button.button.button-fullscreen-volume {
   padding: 32px 0 24px 0;
 }
 
+@media screen and (min-width: 768px) {
+  .comments__user-input {
+    width: 729.6px;
+    margin-left: 2.5%;
+  }
+}
+
 .comment-photo-container {
   margin-right: 15px;
 }
@@ -817,6 +947,10 @@ button.button.button-fullscreen-volume {
   margin-top: 30px;
 }
 
+.form-container {
+  width: 80%;
+}
+
 .form__comment {
   margin: 10px 0 15px 0;
   border: 2px solid #0095ff;
@@ -825,13 +959,43 @@ button.button.button-fullscreen-volume {
   height: 100px;
 }
 
-.form__comment-input label {
+@media screen and (min-width: 768px) {
+  .form__comment {
+    height: 50px;
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form__comment-input {
+    width: 130%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .comments__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.comments__form label {
   color: #afafaf;
   font-family: "Avenir Next Demi";
+}
+
+.button-wrapper {
+  width: 60%;
+  padding-top: 27px;
 }
 
 .form__button {
   width: 100%;
   height: 50px;
+}
+
+.form__comment-input {
+  margin-right: 15px;
 }
 /*# sourceMappingURL=App.css.map */

@@ -40,6 +40,7 @@ ul {
 
 .user-input {
   width: 100%;
+
   & h3 {
     font-family: $font-family-demi;
     width: 95%;
@@ -52,6 +53,10 @@ ul {
   width: 95%;
   margin: 0 auto;
   padding: 32px 0 24px 0;
+  @include tablet {
+    width: 729.6px;
+    margin-left: 2.5%;
+  }
 }
 
 .comment-photo-container {
@@ -64,19 +69,49 @@ ul {
   }
 }
 
+.form-container {
+  width: 80%;
+}
+
 .form__comment {
   margin: 10px 0 15px 0;
   border: 2px solid #0095ff;
   border-radius: 5px;
   width: 100%;
   height: 100px;
-  &-input label {
-    color: #afafaf;
-    font-family: $font-family-demi;
+  @include tablet {
+    height: 50px;
+    //width: 120%;
+    display: inline-block;
   }
+  &-input {
+    @include tablet {
+      width: 130%;
+    }
+  }
+}
+
+.comments__form {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.comments__form label {
+  color: #afafaf;
+  font-family: $font-family-demi;
+}
+
+.button-wrapper {
+  width: 60%;
+  padding-top: 27px;
 }
 
 .form__button {
   width: 100%;
   height: 50px;
+}
+
+.form__comment-input {
+  margin-right: 15px;
 }

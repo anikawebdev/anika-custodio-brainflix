@@ -4,6 +4,10 @@
 
 .next-video {
   width: 100%;
+
+  // @include tablet {
+  //   width: 50%;
+  // }
   & h4 {
     font-family: $font-family-demi;
     margin: 40px auto;
@@ -12,6 +16,11 @@
   }
   &__list {
     width: 95%;
+    max-width: 350px;
+    margin-left: 2.5%;
+    // @include tablet {
+
+    // }
   }
   &__item {
     display: flex;

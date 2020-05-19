@@ -44,17 +44,19 @@ function MainVideo(props) {
       </div>
       <div className="main-video__info">
         <h2>{bannerVideoTitle}</h2>
-        <h3>{bannerVideoAuthor}</h3>
-        <span className="main-video__date">{bannerVideoDate}</span>
-        <div className="main-video__extra-info">
-          <div className="main-video__seen">
-            <img src={SeenIcon} alt="" />
-            {bannerVideoSeen}
-          </div>
-          <div className="main-video__heart">
-            <img src={HeartIcon} alt="" />
+        <div className="main-video-inner-wrapper">
+          <h3>{bannerVideoAuthor}</h3>
+          <span className="main-video__date">{bannerVideoDate}</span>
+          <div className="main-video__extra-info">
+            <div className="main-video__seen">
+              <img src={SeenIcon} alt="" />
+              {bannerVideoSeen}
+            </div>
+            <div className="main-video__heart">
+              <img src={HeartIcon} alt="" />
 
-            {bannerVideoHeart}
+              {bannerVideoHeart}
+            </div>
           </div>
         </div>
       </div>
