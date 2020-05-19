@@ -402,23 +402,91 @@ ul {
   padding-top: 5px;
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+  }
+}
+
 .header__logo {
   height: 35px;
   margin: 5px;
 }
 
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin: 25px 0 0 0;
+  }
+}
+
 .logo-container {
   width: 95%;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
+@media screen and (min-width: 768px) {
+  .logo-container {
+    width: 20%;
+    margin-right: 170px;
+  }
+}
+
+.header-container {
+  width: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .navbar-container {
   width: 95%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.search-bar {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.search-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 20px;
 }
 
 .search-bar-input {
@@ -427,23 +495,23 @@ ul {
   margin-bottom: 10px;
   border: 2px solid #e1e1e1;
   border-radius: 5px;
+  padding-left: 40px;
 }
 
 .upload-profile-container {
   width: 100%;
+  max-width: 304px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.profile-picture-container {
-  width: 75px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+.button-upload-container {
+  height: 50px;
 }
 
 .profile-picture {
@@ -453,7 +521,8 @@ ul {
 }
 
 .button {
-  width: 230px;
+  width: 235px;
+  height: inherit;
   background-color: #0095ff;
   color: #ffffff;
   border-radius: 5px;
@@ -463,16 +532,6 @@ ul {
 .button-upload span {
   font-size: 1.5rem;
   padding-right: 15px;
-}
-
-div.upload-file-container {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .main-video {
@@ -693,11 +752,16 @@ button.button.button-fullscreen-volume {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  line-height: 20px;
+  font-size: 0.9rem;
 }
 
 .next-video__title {
   font-family: "Avenir Next Demi";
+  line-height: 18px;
+}
+
+.next-video__author {
+  line-height: 30px;
 }
 
 .next-video__image {

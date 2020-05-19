@@ -9,21 +9,62 @@
   flex-direction: column;
   align-items: center;
   padding-top: 5px;
+  @include tablet {
+    height: 80px;
+  }
 
   &__logo {
     height: 35px;
     margin: 5px;
+    @include tablet {
+      margin: 25px 0 0 0;
+    }
   }
 }
 
 .logo-container {
   width: 95%;
+  height: 50px;
   display: flex;
+  margin: 0 auto;
   justify-content: center;
+  @include tablet {
+    width: 20%;
+    margin-right: 170px;
+  }
+}
+
+.header-container {
+  width: inherit;
+  @include tablet {
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
 }
 
 .navbar-container {
   width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.search-bar {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.search-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 20px;
 }
 
 .search-bar-input {
@@ -32,18 +73,26 @@
   margin-bottom: 10px;
   border: 2px solid #e1e1e1;
   border-radius: 5px;
+  padding-left: 40px;
 }
 
 .upload-profile-container {
   width: 100%;
+  max-width: 304px;
   display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
-.profile-picture-container {
-  width: 75px;
-  display: flex;
-  justify-content: flex-end;
+.button-upload-container {
+  height: 50px;
 }
+
+// .profile-picture-container {
+//   //width: 75px;
+//   display: flex;
+//   justify-content: flex-end;
+// }
 
 .profile-picture {
   width: 50px;
@@ -52,7 +101,8 @@
 }
 
 .button {
-  width: 230px;
+  width: 235px;
+  height: inherit;
   background-color: #0095ff;
   color: #ffffff;
   border-radius: 5px;
@@ -64,8 +114,8 @@
   }
 }
 
-div.upload-file-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
+// div.upload-file-container {
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+// }
