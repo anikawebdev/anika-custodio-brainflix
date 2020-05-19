@@ -1,0 +1,46 @@
+//
+// NEXT VIDEO
+//
+
+.next-video {
+  width: 100%;
+  & h4 {
+    font-family: $font-family-demi;
+    margin: 40px auto;
+    width: 95%;
+    color: #afafaf;
+  }
+  &__list {
+    width: 95%;
+  }
+  &__item {
+    display: flex;
+    margin-bottom: 24px;
+  }
+  &__span-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 20px;
+  }
+  &__title {
+    font-family: $font-family-demi;
+  }
+}
+
+.next-video__image {
+  width: 120px;
+  height: 70px;
+  border-radius: 5px;
+  margin-right: 16px;
+}
+
+.video {
+  &__item {
+    display: flex;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+}

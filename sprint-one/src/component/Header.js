@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../asset/logo/Logo-brainflix.svg";
 import Mohan from "../asset/image/Mohan-muruge.jpg";
+import UploadIcon from "../asset/icon/SVG/Icon-upload.svg";
 
 function Header() {
   return (
@@ -21,7 +22,10 @@ function Header() {
         </div>
         <div className="upload-profile-container">
           <button className="button button-upload">
-            <span>+</span>UPLOAD
+            <span>
+              <img src={UploadIcon} />
+            </span>
+            UPLOAD
           </button>
           <div className="profile-picture-container">
             <img className="profile-picture" src={Mohan} alt="profile pic" />

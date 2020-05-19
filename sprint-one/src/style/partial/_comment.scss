@@ -1,0 +1,48 @@
+//
+// COMMENT
+//
+
+.grey-circle {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.comment-history {
+  width: 100%;
+  &__list {
+    width: 95%;
+    & li:first-child {
+      border-top: 2px solid #e1e1e1;
+    }
+  }
+  &__item {
+    display: flex;
+    padding: 30px 0;
+    border-bottom: 2px solid #e1e1e1;
+  }
+  &__name {
+    font-family: $font-family-demi;
+  }
+  &__date {
+    color: #afafaf;
+  }
+  &__comment {
+    line-height: 23px;
+  }
+}
+
+.span-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  @include tablet {
+    justify-content: flex-start;
+    & span {
+      margin-right: 15px;
+    }
+  }
+}
