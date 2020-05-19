@@ -1,9 +1,9 @@
 import React from "react";
 import Header from "./component/Header";
 import MainVideo from "./component/MainVideo";
+import MainVideoInfo from "./component/MainVideoInfo";
 import Comment from "./component/Comment";
 import NextVideo from "./component/NextVideo";
-import { uuid } from "uuidv4";
 import "./style/App.css";
 import CommentPhoto from "./asset/image/Mohan-muruge.jpg";
 
@@ -137,42 +137,48 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <MainVideo videoList={this.state.videoList} />
-        <section className="user-input">
-          <h3>3 Comments</h3>
-          <div class="comments__user-input">
-            <div className="comment-photo-container">
-              <img src={CommentPhoto} alt="" />
-            </div>
-            <div className="form-container">
-              <form class="comments__form">
-                <div class="form__comment-input">
-                  <label for="form__comment">JOIN THE CONVERSATION</label>
-                  <textarea
-                    id="form__comment"
-                    class="form__comment"
-                    placeholder="Add a new comment"
-                  ></textarea>
+        <div className="section-wrapper">
+          <div>
+            <MainVideoInfo videoList={this.state.videoList} />
+            <section className="user-input">
+              <h3>3 Comments</h3>
+              <div class="comments__user-input">
+                <div className="comment-photo-container">
+                  <img src={CommentPhoto} alt="" />
                 </div>
-                <div class="button-wrapper">
-                  <button
-                    id="form__button"
-                    class="form__button button"
-                    type="submit"
-                  >
-                    COMMENT
-                  </button>
+                <div className="form-container">
+                  <form class="comments__form">
+                    <div class="form__comment-input">
+                      <label for="form__comment">JOIN THE CONVERSATION</label>
+                      <textarea
+                        id="form__comment"
+                        class="form__comment"
+                        placeholder="Add a new comment"
+                      ></textarea>
+                    </div>
+                    <div class="button-wrapper">
+                      <button
+                        id="form__button"
+                        class="form__button button"
+                        type="submit"
+                      >
+                        COMMENT
+                      </button>
+                    </div>
+                  </form>
                 </div>
-              </form>
-            </div>
+              </div>
+            </section>
+            <section className="comment-history">
+              <Comment commentHistory={this.state.commentHistory} />
+            </section>
           </div>
-        </section>
-        <section className="comment-history">
-          <Comment commentHistory={this.state.commentHistory} />
-        </section>
-        <section className="next-video">
-          <h4>NEXT VIDEO</h4>
-          <NextVideo videoList={this.state.videoList} />
-        </section>
+
+          <aside className="next-video">
+            <h4>NEXT VIDEO</h4>
+            <NextVideo videoList={this.state.videoList} />
+          </aside>
+        </div>
       </div>
     );
   }

@@ -103,8 +103,11 @@ ul {
 }
 
 .button-wrapper {
-  width: 60%;
-  padding-top: 27px;
+  width: 95%;
+  @include tablet {
+    width: 60%;
+    padding-top: 27px;
+  }
 }
 
 .form__button {
@@ -114,4 +117,13 @@ ul {
 
 .form__comment-input {
   margin-right: 15px;
+}
+
+.section-wrapper {
+  @include desktop {
+    display: flex;
+    width: 85%;
+    max-width: $desktop-bp;
+    margin: 0 auto;
+  }
 }

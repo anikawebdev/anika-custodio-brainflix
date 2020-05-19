@@ -1,5 +1,4 @@
 import React from "react";
-import { uuid } from "uuidv4";
 
 function NextVideo(props) {
   const videoImageList = props.videoList

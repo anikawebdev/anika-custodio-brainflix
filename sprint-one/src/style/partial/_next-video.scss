@@ -18,8 +18,8 @@
     width: 95%;
     max-width: 350px;
     margin-left: 2.5%;
-    // @include tablet {
-
+    // @include desktop {
+    //   margin: 0;
     // }
   }
   &__item {
@@ -56,4 +56,12 @@
     display: flex;
     flex-direction: column;
   }
+}
+
+// ul.next-video__list {
+//   margin-right: 0;
+// }
+
+.next-video ul {
+  margin-right: 0;
 }

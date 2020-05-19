@@ -1,7 +1,7 @@
 import React from "react";
-import { uuid } from "uuidv4";
-import SeenIcon from "../asset/icon/SVG/Icon-views.svg";
-import HeartIcon from "../asset/icon/SVG/Icon-likes.svg";
+//import { uuid } from "uuidv4";
+//import SeenIcon from "../asset/icon/SVG/Icon-views.svg";
+//import HeartIcon from "../asset/icon/SVG/Icon-likes.svg";
 import PlayButton from "../asset/icon/SVG/Icon-play.svg";
 import FullScreenButton from "../asset/icon/SVG/Icon-fullscreen.svg";
 import VolumeButton from "../asset/icon/SVG/Icon-volume.svg";
@@ -9,12 +9,12 @@ import VolumeButton from "../asset/icon/SVG/Icon-volume.svg";
 function MainVideo(props) {
   let bannerVideoPoster = props.videoList[0].poster;
   let bannerVideo = props.videoList[0].media;
-  let bannerVideoTitle = props.videoList[0].title;
-  let bannerVideoAuthor = props.videoList[0].author;
-  let bannerVideoDate = props.videoList[0].date;
-  let bannerVideoSeen = props.videoList[0].seen;
-  let bannerVideoHeart = props.videoList[0].heart;
-  let bannerVideoDescription = props.videoList[0].description;
+  // let bannerVideoTitle = props.videoList[0].title;
+  // let bannerVideoAuthor = props.videoList[0].author;
+  // let bannerVideoDate = props.videoList[0].date;
+  // let bannerVideoSeen = props.videoList[0].seen;
+  // let bannerVideoHeart = props.videoList[0].heart;
+  // let bannerVideoDescription = props.videoList[0].description;
 
   return (
     <section className="main-video">
@@ -34,15 +34,15 @@ function MainVideo(props) {
             <div></div>
           </button>
           <button className="button button-fullscreen-volume">
-            <img src={FullScreenButton} />
-            <img src={VolumeButton} />
+            <img src={FullScreenButton} alt="" />
+            <img src={VolumeButton} alt="" />
           </button>
           {/* <button className="button button-volume">
             
           </button> */}
         </div>
       </div>
-      <div className="main-video__info">
+      {/* <div className="main-video__info">
         <h2>{bannerVideoTitle}</h2>
         <div className="main-video-inner-wrapper">
           <h3>{bannerVideoAuthor}</h3>
@@ -60,7 +60,7 @@ function MainVideo(props) {
           </div>
         </div>
       </div>
-      <div className="main-video__extended-info">{bannerVideoDescription}</div>
+      <div className="main-video__extended-info">{bannerVideoDescription}</div> */}
     </section>
   );
 }
