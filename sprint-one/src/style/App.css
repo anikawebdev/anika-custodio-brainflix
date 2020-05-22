@@ -600,7 +600,7 @@ ul {
 
 .main-video-container {
   width: 100%;
-  height: 200px;
+  height: 180px;
   background-color: #323232;
   z-index: -1;
 }
@@ -611,7 +611,7 @@ ul {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
   .main-video-container {
     height: 610px;
   }
@@ -743,7 +743,7 @@ ul {
   display: -ms-flexbox;
   display: flex;
   height: 40px;
-  max-width: 100%;
+  width: 320px;
   margin: 0 auto;
   padding: 0 5px 5px 5px;
   -webkit-box-pack: space-evenly;
@@ -756,7 +756,14 @@ ul {
 @media screen and (min-width: 768px) {
   .button-video-container {
     bottom: 50px;
-    max-width: 85%;
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .button-video-container {
+    bottom: 50px;
+    width: 1050px;
   }
 }
 
