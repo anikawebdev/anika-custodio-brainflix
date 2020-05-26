@@ -1,26 +1,96 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import axios from "axios";
+import { Route, Redirect, withRouter } from "react-router-dom";
+import Header from "./component/Header";
+import MainVideo from "./component/MainVideo";
+import MainVideoInfo from "./component/MainVideoInfo";
+import Comment from "./component/Comment";
+import NextVideo from "./component/NextVideo";
+import Upload from "./component/Upload";
+import "./style/App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const API_KEY = `be98f7ba-186f-406d-892c-9e08cdb0dfd6`;
+const URL_Videos = `https://project-2-api.herokuapp.com/videos?api_key=${API_KEY}`;
+
+class App extends Component {
+  state = {
+    mainVideo: {},
+    videoList: [],
+    currentId: "",
+  };
+
+  componentDidMount() {
+    // Get all videos
+    axios.get(URL_Videos).then((response) => {
+      this.setState(
+        {
+          videoList: response.data,
+        },
+        () => this.getVideoInfo(this.state.videoList[0].id)
+      );
+    });
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.match.params.id !== this.props.match.params.id) {
+      this.getVideoInfo(this.props.match.params.id);
+    }
+  }
+  // Get info about the main video
+  getVideoInfo = (videoId) => {
+    const URL_Main_Video = `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=${API_KEY}`;
+    axios.get(URL_Main_Video).then((mainVideoResponse) => {
+      this.setState({
+        mainVideo: mainVideoResponse.data,
+        currentId: mainVideoResponse.data.id,
+      });
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <Header />
+        <Redirect from="/" to="/videos" />
+        <Route path="/upload" component={Upload} />
+        <Route
+          path="/videos"
+          render={(props) => {
+            return <MainVideo mainVideo={this.state.mainVideo} />;
+          }}
+        />
+        <section className="section-wrapper">
+          <div className="section-left">
+            <Route
+              path="/videos"
+              render={(props) => {
+                return (
+                  <>
+                    <MainVideoInfo mainVideo={this.state.mainVideo} />
+                    <Comment mainVideo={this.state.mainVideo} />
+                  </>
+                );
+              }}
+            />
+          </div>
+          <aside className="section-right">
+            <Route
+              path="/videos"
+              render={(props) => (
+                <React.Fragment>
+                  <h4>NEXT VIDEO</h4>
+                  <NextVideo
+                    videoList={this.state.videoList}
+                    currentId={this.state.currentId}
+                    {...props}
+                  />
+                </React.Fragment>
+              )}
+            />
+          </aside>
+        </section>
+      </div>
+    );
+  }
 }
 
 export default App;
