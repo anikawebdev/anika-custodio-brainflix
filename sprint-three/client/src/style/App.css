@@ -593,6 +593,11 @@ ul {
 .button-upload span {
   padding-right: 15px;
   font-size: 1rem;
+  color: #ffffff;
+}
+
+.button-upload span:visited {
+  color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {
@@ -604,6 +609,15 @@ ul {
 @media screen and (min-width: 1440px) {
   .upload {
     width: 85%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .upload-wrapper {
+    border-top: 2px solid #e1e1e1;
+    padding-top: 10px;
+    width: 95%;
     margin: 0 auto;
   }
 }
@@ -620,7 +634,7 @@ ul {
 .upload__title {
   width: 95%;
   font-family: "Avenir Next Bold";
-  margin: 24px auto 32px auto;
+  margin: 24px auto;
 }
 
 @media screen and (min-width: 1440px) {
@@ -642,6 +656,12 @@ ul {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .upload__thumbnail-wrapper {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -675,6 +695,12 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .upload-form {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -718,7 +744,7 @@ ul {
 }
 
 .upload-buttons {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -737,7 +763,6 @@ ul {
 @media screen and (min-width: 1440px) {
   .upload-buttons {
     margin: 0 0 0 0;
-    width: 100%;
   }
 }
 
@@ -1073,6 +1098,7 @@ button.button.button-fullscreen-volume {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding-top: 7px;
 }
 
 @media screen and (min-width: 768px) {
